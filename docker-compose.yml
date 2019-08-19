@@ -29,8 +29,26 @@ services:
         container_name: php-fpm
         volumes:
             - './:/var/www/'
+        links:
+            - blackfire:blackfire
         external_links:
             - mysql-server:mysql-server.local
+        networks:
+            - sf3-network
+
+    blackfire:
+        image: blackfire/blackfire
+        container_name: blackfire
+        environment:
+            - BLACKFIRE_LOG_LEVEL=4
+            - BLACKFIRE_CLIENT_ID
+            - BLACKFIRE_CLIENT_TOKEN
+            - BLACKFIRE_SERVER_ID
+            - BLACKFIRE_SERVER_TOKEN
+        ports:
+            - "8707:8707"
+        links:
+            - nginx-proxy:*.local
         networks:
             - sf3-network
 

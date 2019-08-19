@@ -1,0 +1,4 @@
+/symfony/
+/.env
+/.docker/
+/.git/
