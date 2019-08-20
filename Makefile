@@ -48,3 +48,11 @@ shbf: ## Connect into blackfire container
 # Init symfony 3.x.x project
 project-init: ## Init symfony 3.2.x project
 	docker exec -it -u 1000 php-fpm composer create-project symfony/framework-standard-edition:3.2.* symfony
+
+# Execute blackfire curl
+blackfire_curl: ## Execute blackfire curl
+	docker exec -it blackfire blackfire curl $(word 2, $(MAKECMDGOALS))
+
+# Execute blackfire run
+blackfire_curl: ## Execute blackfire run
+	docker exec -it blackfire blackfire run $(word 2, $(MAKECMDGOALS))
