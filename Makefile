@@ -54,5 +54,5 @@ blackfire_curl: ## Execute blackfire curl
 	docker exec -it blackfire blackfire curl $(word 2, $(MAKECMDGOALS))
 
 # Execute blackfire run
-blackfire_curl: ## Execute blackfire run
+blackfire_run: ## Execute blackfire run
 	docker exec -it blackfire blackfire run $(word 2, $(MAKECMDGOALS))
