@@ -48,7 +48,7 @@ services:
         ports:
             - "8707:8707"
         links:
-            - nginx-proxy:*.local
+            - nginx-proxy:mon-site.local
         networks:
             - sf3-network
 
