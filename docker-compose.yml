@@ -15,7 +15,7 @@ services:
         build: .docker/nginx
         container_name: nginx
         environment:
-            VIRTUAL_HOST: mon-site.local
+            VIRTUAL_HOST: mon-site.localhost
         volumes:
             - '.docker/nginx/conf/conf.d:/etc/nginx/conf.d:ro'
             - './:/var/www/'
@@ -32,7 +32,7 @@ services:
         links:
             - blackfire:blackfire
         external_links:
-            - mysql-server:mysql-server.local
+            - mysql-server:mysql-server.localhost
         networks:
             - sf3-network
 
@@ -48,7 +48,7 @@ services:
         ports:
             - "8707:8707"
         links:
-            - nginx-proxy:mon-site.local
+            - nginx-proxy:mon-site.localhost
         networks:
             - sf3-network
 
@@ -70,12 +70,12 @@ services:
         image: phpmyadmin/phpmyadmin
         container_name: phpmyadmin
         environment:
-            VIRTUAL_HOST: 'pma.local'
-            PMA_HOST: 'mysql-server.local'
+            VIRTUAL_HOST: 'pma.localhost'
+            PMA_HOST: 'mysql-server.localhost'
             PMA_USER: 'root'
             PMA_PASSWORD: 'root'
         links:
-            - mysql-server:mysql-server.local
+            - mysql-server:mysql-server.localhost
         networks:
             - sf3-network
 

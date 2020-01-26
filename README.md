@@ -1,6 +1,6 @@
 # Docker Template - PHP-Symfony 3.2.* project
 
-### Version 2.0 - August 2019
+### Version 2.1 - January 2020
 
 * This stack provide a developpement environment ready to run a PHP-Symfony 3.2.* project.
 * Prerequisite : to have Docker and Docker-Compose installed on your machine - <https://docs.docker.com/install/>
@@ -52,7 +52,7 @@ git clone https://github.com/WizBhoo/docker_sf3-2.git
 * Go to the docker_sf3-2 cloned folder with your terminal (you can rename it as you want)
 
 <blockquote>
-Note that Make command is available thanks to the Makefile provided.</br>
+Note that Make command is available thanks to the Makefile provided.<br>
 To know which commands are available use "make help" in your terminal.
 </blockquote>
 
@@ -69,8 +69,8 @@ docker exec -it -u 1000 php-fpm composer create-project symfony/framework-standa
 
 ## Advanced configuration
 
-* Two virtual hosts are defined for locally use : mon-site.local (site homepage)  &  pma.local (PHPMyAdmin interface).
-So don't forget to add them to your hosts file if you want to use them.
+* Two virtual hosts are defined for locally use : mon-site.localhost (site homepage)  &  pma.localhost (PHPMyAdmin interface).
+So don't forget to add them to your hosts file if you want to use them. (=> NB : No need anymore since Version 2.1 - January 2020).
 * In the docker-compose file you will find environment variables for MySQL and PHPMyAdmin. You can edit them at your convenience.
 * It's very easy to make this stack operationnal for a Symfony project version 3.4 or 4.*
     * Go to edit the .docker/nginx/conf/conf.d/mon-site.conf file.
@@ -79,9 +79,9 @@ So don't forget to add them to your hosts file if you want to use them.
 * Re-build containers / Re-run them / Work DONE ! / ENJOY !
 
 <blockquote>
-Note that you need to edit the makefile too if you want. Make project-init command has to refer to :</br>
+Note that you need to edit the makefile too if you want. Make project-init command has to refer to :<br>
 docker exec -it -u 1000 php-fpm composer create-project symfony/website-skeleton:3.4.* symfony
-</br>or</br>
+<br>or<br>
 docker exec -it -u 1000 php-fpm composer create-project symfony/website-skeleton:4.* symfony
 </blockquote>
 
