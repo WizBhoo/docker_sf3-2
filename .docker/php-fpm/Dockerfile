@@ -86,4 +86,7 @@ ADD conf/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 WORKDIR /var/www
 
+RUN apk add tzdata
+ENV TZ=Europe/Paris
+
 CMD ["php-fpm"]
