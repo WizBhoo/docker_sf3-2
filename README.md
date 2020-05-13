@@ -1,8 +1,8 @@
 # Docker Template - PHP-Symfony 3.2.* project
 
-### Version 1.0.3 - May 2020
+### Version 1.0.4 - May 2020
 
-*   This stack provide a development environment ready to run a PHP-Symfony 3.2.* project.
+*   This stack provides a development environment ready to run a PHP-Symfony 3.2.* project.
 *   Prerequisite : to have Docker and Docker-Compose installed on your machine - [Docker Install](https://docs.docker.com/install/)
 *   Preferred Operating System to use it : Linux / Mac OSx
 
@@ -10,7 +10,7 @@
 
 Realized thanks to [(see GitHub)](https://github.com/drixs6o9) support.
 
-Maintained and adapted by Adrien PIERRARD [adrien.pierrard@gmail.com](mailto:adrien.pierrard@gmail.com).
+Maintained and adapted by Adrien PIERRARD [(see GitHub)](https://github.com/WizBhoo).
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -101,4 +101,6 @@ docker exec -it -u 1000 php-fpm composer create-project symfony/website-skeleton
 
 Thanks in advance for Star contribution.
 
-Any question / trouble ? Please send me an e-mail ;-) - [adrien.pierrard@gmail.com](mailto:adrien.pierrard@gmail.com)
+Any question / trouble ?
+
+Please send me an [e-mail](mailto:apierrard.contact@gmail.com) ;-)
